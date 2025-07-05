@@ -1,0 +1,154 @@
+Final Course Project: The Art Dealer Game
+Student Name: Mario Opoku Adusei
+Course: Software Engineering
+Submission Due: July 5, 2025
+1. Problem Statement
+K–8 students often struggle with abstract computational and mathematical thinking. There’s a
+need for a robust, interactive, and educationally appropriate simulation that not only engages
+them through age-appropriate challenges but also builds computational literacy progressively.
+Objective: Develop a multi-level educational simulation, “The Art Dealer Game,” using Python
+or Java, to help K–8 students learn logic, math, pattern recognition, and computational thinking
+through a visually consistent, gamified experience.
+2. Literature Survey
+Existing educational simulations (like Code.org games or Tynker) prove the effectiveness of
+interactive learning. However, few utilize classic logic games involving cards and pattern
+deduction across multiple cognitive stages. The Art Dealer Game draws inspiration from:
+ Pattern recognition games (e.g., Set, Blackjack)
+ Educational scaffolding theory (Bruner)
+ Constructivist learning (Papert)
+The idea is unique in adapting poker-deck logic to scaffolded learning stages across K–8.
+3. Software Requirements Specification (SRS)
+3.1 Functional Requirements:
+ Users interact with 4-card hands per round.
+ The &quot;art dealer&quot; (software) chooses a hidden pattern.
+ The student selects cards, receives feedback on what is “bought,” and tries to guess the
+pattern.
+ Success is marked with visual and audio rewards; 3 wrong guesses end the game.
+3.2 Non-Functional Requirements:
+ Usable by children—simple UI, robust inputs
+ Audio prompts
+ Cross-platform (Windows/Mac)
+ Consistency across K-2, 3-5, and 6-8 levels
+
+3.3 User Groups:
+ Students (Primary users)
+ Teachers (Supervision, guiding)
+3.4 Technologies:
+ Language: Python (preferred for educational tools)
+ GUI Library: Tkinter / Pygame
+ Audio: Pygame mixer or built-in tools
+ Deployment: PyInstaller (for .exe)
+4. System Design (High-Level)
+4.1 Architecture:
+ MVC (Model-View-Controller) design
+ Pattern Engine (backend logic)
+ UI Module (age-based layout + visuals)
+ Game State Tracker
+ Audio + Visual Feedback System
+4.2 Modules by Age:
+ K–2: Simple color/suit patterns (e.g., &quot;all red&quot;, &quot;all queens&quot;)
+ 3–5: Math logic (prime numbers, cards adding to 9)
+ 6–8: Complex logic (poker hands, multiple conditions)
+
+5. Implementation Details
+5.1 Core Game Logic
+The Art Dealer Game was implemented in Python using Tkinter for the graphical user interface. The core game logic includes:
+ - Card representation with suits, ranks, and values
+ - Deck generation and randomized card drawing
+ - Pattern recognition algorithms for each grade level
+ - Game state management and turn tracking
+
+5.2 Two-Student Support
+A key feature of the implementation is support for two students playing collaboratively:
+ - Student name input dialog at game start
+ - Turn-taking system that alternates between students
+ - Visual indication of the current student's turn
+ - Separate tracking of each student's performance
+
+5.3 Audio Features
+The game includes audio feedback to enhance the learning experience:
+ - Welcome message when the game starts
+ - Sound effects for drawing cards
+ - Audio feedback for correct and incorrect guesses
+ - Level selection sounds
+ - Support for both WAV and MP3 audio formats
+ - Graceful fallback if audio files or pygame are unavailable
+
+5.4 Assessment Tracking
+An assessment system was implemented to track student progress:
+ - Recording of guesses, correct answers, and games won per student
+ - Calculation of accuracy percentages
+ - Assessment window displaying statistics and learning outcomes
+ - Grade-level specific learning objectives
+
+5.5 Resource Management
+The implementation includes robust resource handling:
+ - A resource_path helper function to locate assets in both development and executable modes
+ - Proper bundling of audio files with the executable
+ - Error handling for missing resources
+
+6. Testing and Validation
+6.1 Functional Testing
+Each component of the game was tested to ensure it meets the requirements:
+ - Card drawing and pattern recognition
+ - Grade level-specific patterns
+ - Two-student turn-taking
+ - Audio playback
+ - Assessment tracking and reporting
+
+6.2 User Interface Testing
+The UI was tested for usability and accessibility:
+ - Button placement and sizing appropriate for K-8 students
+ - Clear visual feedback
+ - Consistent look and feel across grade levels
+ - Readable text and intuitive controls
+
+6.3 Cross-Platform Testing
+The application was tested on:
+ - Windows 10 (primary platform)
+ - Executable testing to ensure proper bundling of resources
+
+6.4 Error Handling
+The application was tested for robustness:
+ - Graceful handling of missing audio files
+ - Optional pygame dependency with text fallback
+ - Input validation for student names
+
+7. Results and Discussion
+7.1 Achievements
+The Art Dealer Game successfully implements all required features:
+ - Three distinct grade levels with appropriate pattern complexity
+ - Two-student collaborative play
+ - Audio prompts and feedback
+ - Assessment tracking and reporting
+ - Standalone executable for easy distribution
+
+7.2 Challenges and Solutions
+ - **Audio Implementation**: Initially, only WAV files were supported. This was expanded to include MP3 format for better compatibility.
+ - **Resource Paths**: Ensuring resources were accessible both in development and when bundled in an executable required implementing a resource_path helper function.
+ - **Two-Student Logic**: Implementing turn-taking required careful state management to ensure the game flow remained intuitive.
+ - **Assessment Tracking**: Designing a system that provided meaningful feedback while remaining simple enough for young students required balancing detail with clarity.
+
+8. Conclusion
+The Art Dealer Game project successfully delivers an educational simulation that engages K-8 students in computational thinking and pattern recognition. By implementing grade-appropriate challenges, audio feedback, and assessment tracking, the game provides a complete learning experience that can be used in classroom settings.
+
+The project demonstrates the application of software engineering principles including requirements analysis, system design, implementation, and testing. The modular architecture allows for future enhancements while maintaining a consistent user experience across different grade levels.
+
+9. Future Work
+ - Expanded pattern library for each grade level
+ - Additional game modes (e.g., timed challenges, competitive play)
+ - Teacher dashboard for monitoring student progress
+ - Online multiplayer support
+ - Mobile/tablet optimization
+ - Integration with learning management systems
+ - Customizable difficulty settings within each grade level
+
+10. References
+ - Bruner, J. S. (1966). Toward a theory of instruction. Harvard University Press.
+ - Papert, S. (1980). Mindstorms: Children, computers, and powerful ideas. Basic Books.
+ - Python Software Foundation. (2023). Tkinter - Python interface to Tcl/Tk.
+ - PyInstaller Development Team. (2023). PyInstaller Manual.
+ - Pygame Community. (2023). Pygame Documentation.
+
+11. Appendix: Screenshots
+[Note: Include screenshots of the game showing different grade levels, two-student mode, and assessment tracking]

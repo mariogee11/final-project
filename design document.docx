@@ -1,0 +1,75 @@
+The Art Dealer Game - Design Document
+1. Introduction
+The Art Dealer Game is a Python-based educational game designed to help K–8 students practice computational thinking through a card simulation. Students attempt to identify hidden card patterns using visual and logical clues, progressing through age-appropriate levels. The game supports two students playing collaboratively, with audio prompts and assessment tracking to enhance the learning experience.
+
+2. Software Requirements Specification (SRS)
+2.1 Functional Requirements
+ The system allows users to:
+  o Enter names for two students
+  o Select grade level (K–2, 3–5, or 6–8)
+  o Draw four cards per turn
+  o Observe which cards the art dealer (AI) buys
+  o Submit a guess about the hidden pattern
+  o Receive visual and audio feedback based on accuracy
+  o Track turns between two students
+  o View assessment statistics and learning outcomes
+ Users can restart the game after each round.
+2.2 Non-Functional Requirements
+ Platform-independent (Python-based)
+ Designed with children in mind (easy navigation, large buttons, minimal text)
+ Visual feedback (text prompts, highlighting)
+ Audio feedback for key game events
+ Support for both WAV and MP3 audio formats
+ Two-student collaborative learning
+ Assessment tracking and reporting
+ Must run without needing to compile code (via executable)
+2.3 Constraints
+ Language: Python 3.8+
+ GUI Framework: Tkinter
+ Deployment format: .py and .exe (via PyInstaller)
+
+3. System Design
+3.1 Architecture
+ Follows MVC (Model-View-Controller) approach
+ Model: Card logic and pattern rules
+ View: Tkinter GUI elements
+ Controller: Game loop, pattern checker, user input manager
+3.2 Major Modules
+ Card: Represents a playing card object with suit, rank, and utility methods
+ Deck: A list of Card objects randomly drawn from
+ PatternEngine: Contains logic to validate card sets against pattern rules by grade
+ AudioManager: Handles audio playback with support for WAV and MP3 formats
+ AssessmentTracker: Tracks student performance, turns, and learning outcomes
+ GameUI: GUI built using Tkinter with card buttons, game status, and level selection
+3.3 Patterns by Grade Level
+ K–2: Simple rules (e.g., all cards are red, all are queens)
+ 3–5: Includes K–2 rules plus number logic (e.g., primes, sum equals target)
+ 6–8: Adds advanced combinations (e.g., value = 21, mixed suits, poker-like hands)
+
+4. User Interaction Flow
+1. Launch the game interface.
+2. Enter names for two students.
+3. First student selects grade level.
+4. Students take turns clicking on card draw buttons to pick 4 cards.
+5. Current student submits guess.
+6. Receives audio and visual feedback (win/lose/try again).
+7. If incorrect and attempts remain, turn passes to other student.
+8. Students can view assessment statistics at any time.
+9. Game continues until pattern is guessed or attempts are exhausted.
+10. New game begins with the next student's turn.
+
+5. Implemented Enhancements
+ Two-student collaborative mode
+ Audio prompts and feedback
+ Assessment tracking and reporting
+ Support for multiple audio formats
+
+6. Future Enhancements
+ Extended multiplayer mode (one student as the dealer)
+ Timer and advanced scoring system
+ Expanded pattern library
+ Touchscreen optimization for tablets
+ Online leaderboards
+
+6. Conclusion
+The Art Dealer Game applies software engineering principles to build a simple yet engaging simulation tool. Its clear modular design and alignment with educational outcomes make it both pedagogically valuable and technically robust.

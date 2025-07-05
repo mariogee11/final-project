@@ -1,0 +1,72 @@
+The Art Dealer Game - User Manual
+
+Overview
+The Art Dealer Game is an interactive educational simulation developed to help
+students in grades K–8 enhance their computational thinking and pattern recognition
+skills. It presents players with a deck of cards and challenges them to discover hidden
+patterns through a fun and intuitive interface. The game supports two students playing together and includes audio prompts and assessment tracking.
+
+System Requirements
+ Operating System: Windows or macOS
+ Python 3.8 or above
+ Tkinter GUI library (pre-installed with Python)
+ Pygame library (for audio features)
+ Optional: PyInstaller (to run the game without Python)
+
+Installation Guide
+Option 1: Run from Python Source Code
+1. Download or clone the GitHub repository:
+git clone https://github.com/your-username/art-dealer-game.git
+cd art-dealer-game
+2. Run the game:
+python art_dealer_game.py
+Option 2: Run the Executable
+1. Download the latest release .exe from the dist/ folder in the repository.
+2. Double-click the executable to launch the game.
+
+How to Play
+1. Launch the game.
+2. Enter names for two students when prompted.
+3. Select your grade level (K-2, 3-5, or 6-8).
+4. Click each of the four "Draw Card" buttons to draw cards from the deck.
+5. Observe what the art dealer (the AI) buys (indicated by the software's pattern
+recognition).
+6. The current student's turn is displayed at the bottom of the screen.
+7. Click Submit Guess to see if the four cards follow the dealer's secret pattern.
+8. You have 3 attempts to identify the correct pattern per round (students take turns).
+9. If successful, you'll receive a celebratory message and audio feedback.
+10. If incorrect, the turn passes to the other student.
+11. Click "View Assessment" to see statistics on each student's performance.
+
+Game Objectives by Grade Level
+K–2:
+ Identify simple patterns: all red cards, all black cards, same suit, or same rank.
+Grades 3–5:
+ More complex rules: prime-number values, cards that sum to a specific number
+(e.g., 9), or specific combinations.
+Grades 6–8:
+ Advanced logic: poker-style hands, value combinations (e.g., value = 21), or
+sequence-based logic.
+
+Accessibility Features
+ Large buttons and readable fonts
+ Color-coded cards
+ Simple interface suitable for young learners
+ Audio prompts and feedback
+ Two-student collaborative mode
+ Assessment tracking and learning outcomes
+
+Troubleshooting
+ Issue: App doesn't launch
+  o Ensure Python is installed
+  o Use Python 3.8+
+ Issue: Buttons not working
+  o Reinstall dependencies and restart the game
+ Issue: No audio
+  o Ensure pygame is installed (pip install pygame)
+  o Check that audio files are in the assets/audio directory
+  o The game will still function without audio files
+
+Support
+For questions or bug reports, please open an issue on the GitHub repository or contact
+the developer at [mariojopokuadusei@lewisu.edu].
