@@ -26,18 +26,9 @@ This implementation supports two students playing collaboratively, includes audi
 
 ## Installation
 
-### Option 1: Run the Included Executable (Recommended)
-1. Clone this repository or download the ZIP
-```bash
-git clone https://github.com/mariogee11/final-project
-```
+The executable is not included in this repository due to its size. Therefore you must following the installing guide to create your own.
 
-2. Navigate to the `dist` folder
-3. Run `art_dealer_game.exe`
-
-The executable is included in this repository and requires no additional installation or dependencies.
-
-### Option 2: Run from Source Code
+### Run from Source Code
 1. Clone this repository or download the ZIP
 ```bash
 git clone https://github.com/mariogee11/final-project
